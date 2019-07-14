@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+		<!-- Bootstrap core CSS -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+		<!-- Material Design Bootstrap -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/css/mdb.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="styles/style.css" />
+		<!-- JQuery -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- Bootstrap tooltips -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+		<!-- Bootstrap core JavaScript -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<!-- MDB core JavaScript -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/js/mdb.min.js"></script>
+		<script type="text/javascript" src="js/estados.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<title>Stairs Creative Studio - Search</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="shadow content">
+				<form id="form" class="form-inline md-form form-sm active-pink-2 mt-2">
+					<i class="fas ml-2 fa-globe-americas" aria-hidden="true"></i>
+					<input class="form-control form-control-sm ml-3 w-75" id="search" type="text" placeholder="Digite o Estado" aria-label="Search" />
+					<button class="btn purple-gradient">Buscar</button>
+				</form>
+			</div>
+		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="modalEstado" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLongTitle">Resultado da busca</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-group row">
+							<label for="estado" class="col-sm-2 col-form-label">Estado: </label>
+							<div class="col-sm-10">
+								<input type="text" readonly class="form-control-plaintext" id="estado" />
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="sigla" class="col-sm-2 col-form-label">Sigla: </label>
+							<div class="col-sm-10">
+								<input type="text" readonly class="form-control-plaintext" id="sigla" />
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="capital" class="col-sm-2 col-form-label">Capital: </label>
+							<div class="col-sm-10">
+								<input type="text" readonly class="form-control-plaintext" id="capital" />
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="regiao" class="col-sm-2 col-form-label">Região: </label>
+							<div class="col-sm-10">
+								<input type="text" readonly class="form-control-plaintext" id="regiao" />
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal Error -->
+		<div class="modal fade" id="modalErro" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLongTitle">Erro</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						Não foi encontrando nenhum estado a partir da sua busca! :(
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
